@@ -1,0 +1,27 @@
+{
+  "name": "svslte2tsx-issue-on-never",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "svelte": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist/* && rollup -c",
+    "postbuild": "svelte2dts ./src --runOnTs",
+    "prepublishOnly": "npm run build",
+    "validate": "svelte-check"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "11.2.0",
+    "@rollup/plugin-typescript": "8.2.0",
+    "@tsconfig/svelte": "1.0.10",
+    "rollup": "2.41.4",
+    "rollup-plugin-svelte": "7.1.0",
+    "svelte": "3.35.0",
+    "svelte-check": "1.2.6",
+    "svelte-preprocess": "4.6.9",
+    "svelte2dts": "0.2.12",
+    "svelte2tsx": "0.1.183",
+    "typescript": "4.2.3"
+  }
+}
